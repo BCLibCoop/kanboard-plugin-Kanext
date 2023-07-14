@@ -73,7 +73,7 @@
 
             <div class="kanext_dashboard-add-new-task">
                 <small>
-                    <?php if ($this->projectRole->canCreateTaskInColumn($result['project_id'], $column['id'])): ?>
+                    <?php if ($this->projectRole->canCreateTaskInColumn($result['project_id'], null)): ?>
 
                         <?= $this->helper->modal->large(
                             'plus',
