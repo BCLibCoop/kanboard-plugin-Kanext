@@ -34,7 +34,7 @@
                                             $this->text->e($task['category_name']),
                                             'TaskModificationController',
                                             'edit',
-                                            array('task_id' => $task['id'], 'project_id' => $task['project_id']),
+                                            array('task_id' => $task['id']),
                                             false,
                                             'js-modal-medium' . (! empty($task['category_description']) ? ' tooltip' : ''),
                                             t('Change category')
@@ -52,7 +52,7 @@
                                 <span
                                     <?php if ($this->user->hasProjectAccess('TaskModificationController', 'edit', $task['project_id'])): ?>
                                     class="task-board-change-assignee"
-                                    data-url="<?= $this->url->href('TaskModificationController', 'edit', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>">
+                                    data-url="<?= $this->url->href('TaskModificationController', 'edit', array('task_id' => $task['id'])) ?>">
                                 <?php else: ?>
                                     class="task-board-assignee">
                                 <?php endif ?><span class="task-avatar-assignee"><?= $this->text->e($task['assignee_name'] ?: $task['assignee_username']) ?></span>
