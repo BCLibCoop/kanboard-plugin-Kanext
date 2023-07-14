@@ -23,7 +23,7 @@ class KanextConfigController extends ConfigController
 
         // Set the disabled checkboxes values
         foreach ($this->configHelper->getCheckboxes() as $checkbox) {
-            if (!$values[$checkbox]) {
+            if (!isset($values[$checkbox]) || !$values[$checkbox]) {
                 $values[$checkbox] = 0;
             }
         }
