@@ -38,12 +38,10 @@ class KanextDashboardModel extends Base
 
         if ($this->configHelper->get('kanext_feature_kanext_dashboard_show_comments_separately') === "1") {
             $queryBuilder->getQuery()
-                ->beginAnd()
                 ->neq(ProjectActivityModel::TABLE.'.event_name', self::EVENT_UPDATE)
                 ->neq(ProjectActivityModel::TABLE.'.event_name', self::EVENT_CREATE)
                 ->neq(ProjectActivityModel::TABLE.'.event_name', self::EVENT_DELETE)
                 ->neq(ProjectActivityModel::TABLE.'.event_name', self::EVENT_USER_MENTION)
-                ->closeAnd()
             ;
         }
 

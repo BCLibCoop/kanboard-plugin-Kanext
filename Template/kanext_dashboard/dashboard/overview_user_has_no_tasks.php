@@ -18,8 +18,6 @@
                         'TaskCreationController',
                         'show', array(
                             'project_id'  => $result['project_id'],
-                            'column_id'   => null,
-                            'swimlane_id' => null,
                         )
                     ); ?>
 
