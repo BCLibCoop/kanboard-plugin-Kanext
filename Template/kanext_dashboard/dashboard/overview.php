@@ -21,7 +21,7 @@
 
     <div class="kanext_dashboard-column kanext_dashboard-column--right-padding kanext_dashboard-column kanext_dashboard-column--double-size">
         <?php if ($this->app->configHelper->get('kanext_feature_kanext_dashboard_show_tasks_of_loggedin_user') === "1"): ?>
-        <?= $this->render('kanext:kanext_dashboard/dashboard/overview_paginator', array('overview_paginator' => $overview_paginator)) ?>
+        <?= $this->render('kanext:kanext_dashboard/dashboard/overview_paginator', array('overview_paginator' => $overview_paginator, 'user' => $user)) ?>
         <?php endif; ?>
 
         <?php if ($this->app->configHelper->get('kanext_feature_kanext_dashboard_show_projects_where_the_user_has_no_tasks') === "1"): ?>
